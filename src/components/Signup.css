@@ -1,0 +1,153 @@
+body{
+  background-color: #EBF3FA;
+}
+.portion-2{
+  display: flex;
+  width: auto;
+  height: 85vh;
+}
+.signup-container {
+    width: 23vw;
+    margin-top: 10vh;
+    backface-visibility: hidden;
+    /* margin: 0 auto; */
+    padding: 20px;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+  }
+  #f-h{
+    color: #CC6164;
+  }
+  .signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00A9FF;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #CC6164;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .signup-btn:hover {
+    background-color: #007FFF;
+  }
+  .header{
+    text-align: center;
+   margin-top: 2vh;
+  }
+  
+  .head1{
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .head2{
+    margin-top: -2vh;
+    font-size: 1.8em;
+    font-weight: 400;
+  }
+  .login-image {
+      width: 60vw;
+      margin-top: -5vh;
+  margin-bottom: -14vh;
+  }
+
+
+  .slider {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 15px;
+  
+  }
+  
+  .slider input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider-button {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  
+  .slider-button:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider-button {
+    background-color: #CC6164;
+  }
+  
+  input:checked + .slider-button:before {
+    transform: translateX(20px);
+  }
+  
+  /* Additional Styling */
+  .slider-group {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    flex-direction: row;
+   margin-top: 15px;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .slider-group > #rem ,.slider-button{
+    font-size: 14px;
+    color: #333;
+    
+  }
+   .forgot {
+    margin-left: 2.5em;
+    color: #d51515;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .forgot :hover{
+    text-decoration: line-through;
+  }
