@@ -33,7 +33,7 @@ const Signup = () => {
 
       if (response.ok) {
         alert(data.message || "Signup successful! Redirecting to login...");
-        navigate("/Signup"); 
+        navigate("/login"); 
       } else {
         alert(data.message || "Signup failed. Please try again.");
       }
@@ -47,12 +47,12 @@ const Signup = () => {
 
   return (
     <div className="portion">
-         <div className="header">
+         <div className="Head">
             <div className="head1">NUTRITRACK</div>
             <p className="head2">Your pocket sized nutrition coach</p>
             </div>
       <div className="portion-2">
-        <img className="login-image" src={weblogin} alt="image" srcset="" />
+        <img className="login-image" src={weblogin} alt="image" />
         <div className="signup-container">
           <form onSubmit={handleSignup}>
             <div className="form-group">
@@ -89,7 +89,7 @@ const Signup = () => {
                 required
               />
             </div>
-            <button type="submit" className="signup-btn" disabled={loading}>
+            <button type="submit" className="signup-btn" disabled={loading} >
               {loading ? "Signing Up..." : "Sign Up"}
             </button>
           </form>

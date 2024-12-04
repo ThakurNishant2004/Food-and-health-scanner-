@@ -5,13 +5,37 @@ import forgotpass from "../assests/forgotpass.svg"
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState("false");
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log("Password reset email sent to:", email);
     alert(`A password reset link has been sent to ${email}`);
-    navigate("/ForgotPassword2"); // Redirect back to login page
+    navigate("/ResetPassword"); 
+
+    setLoading(true);
+    try {
+      const response = await fetch("https://e-mail-auth.onrender.com/user/forgotPassword", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      });
+      // console.log(response.status)
+      console.log(response)
+
+     await response.json();
+
+    } catch (error) {
+      console.error("Error during signup:", error);
+      alert("An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -24,7 +48,7 @@ const ForgotPassword = () => {
     </div>
 </nav>
    <div className="cont">
-   <img src={forgotpass} alt="image" srcset="" />
+   <img className="forgot-img" src={forgotpass} alt="image" srcset="" />
     <div className="forgot-password-container">
       <h2 className="forgot-title">Forgot Password</h2>
       <p className="forgot-description">
@@ -39,8 +63,8 @@ const ForgotPassword = () => {
           placeholder="Enter your email"
           required
         />
-        <button type="submit" className="forgot-btn" onClick={() => navigate("/ForgotPassword")}>
-          Send Reset Link
+        <button type="submit" className="forgot-btn" onClick={() => navigate("/ResetPassword")}>
+            Send Reset Link
         </button>
       </form>
       <p className="back-to-login">

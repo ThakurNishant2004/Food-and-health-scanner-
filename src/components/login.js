@@ -10,26 +10,56 @@ import weblogin from "../assests/weblogin.svg";
 const Login = () => {
 
   const navigate = useNavigate()
-
+  const [loading, setLoading] = useState(false); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isRememberMe, setIsRememberMe] = useState(false);
 
-  const handleLogin = (e) => {
+  const handleLogin = async(e) => {
     e.preventDefault();
+    setLoading(true);
+
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Remember Me:", isRememberMe ? "Yes" : "No");
+    try {
+      const response = await fetch("https://e-mail-auth.onrender.com/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+      // console.log(response.status)
+      console.log(response)
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert(data.message || "Login successful! Redirecting...");
+        navigate("/HomePage"); 
+      } else {
+        alert(data.message || "Login failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error during signup:", error);
+      alert("An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
+  
 
   const handleToggle = () => {
     setIsRememberMe(!isRememberMe);
   };
 
-
   return (
       <div className="portion">
-           <div className="header">
+           <div className="Head">
               <div className="head1">NUTRITRACK</div>
               <p className="head2">Your pocket sized nutrition coach</p>
               </div>
@@ -70,8 +100,8 @@ const Login = () => {
           <span id='rem'>Remember Me</span>
           <span className="forgot" onClick={()=>navigate("/ForgotPassword")}>Forgot Password?</span>
         </div>
-              <button type="submit" className="signup-btn" >
-                  Sign in
+              <button type="submit" className="signup-btn" disabled={loading}>
+              {loading ? "Login..." : "Login"}
               </button>
             </form>
             <p>

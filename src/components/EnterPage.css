@@ -10,7 +10,7 @@
 
 .head {
   display: flex;
-  place-items: baseline;
+  place-items: center;
   justify-content: space-around;
   column-gap: 44vw;
   margin-bottom: 0;
@@ -34,8 +34,6 @@
   font-size: 4em;
 }
 
-/* background-color: #fff; */
-/* background: radial-gradient(circle, rgba(0, 169, 255, 0.6), #001F3F 80%); */
 .ph1 {
   text-align: right;
   align-items: flex-start;
@@ -114,10 +112,8 @@ button {
   font-size: 1rem;
   border: none;
   border-radius: 5px;
-  /* background-color: #ff5733; */
   color: white;
   cursor: pointer;
-  /* transition: background 0.3s; */
 }
 
 button:hover {
@@ -142,7 +138,7 @@ button:hover {
   background-color: #361717;
   height: 17vh;
   display: flex;
-  place-items: baseline;
+  place-items: center;
   justify-content: space-around;
   align-items: center;
   column-gap: 40vw;
@@ -164,10 +160,10 @@ button:hover {
 
 @media only screen and (max-width: 768px) {
   .head {
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
     column-gap: 0;
+    justify-content: space-around;
+    column-gap: 100vw;
   }
   .p1-cont{
     margin: -21vh 0 0 50vw;

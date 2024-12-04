@@ -5,32 +5,40 @@ import forgotpass from "../assests/forgotpass.svg";
 
 const ResetPassword = () => {
   const navigate = useNavigate();
-  const [otp, setOtp] = useState("");
-  const [isOtpVerified, setIsOtpVerified] = useState(false);
+  const[loading,setLoading]=useState("false")
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleOtpSubmit = (e) => {
-    e.preventDefault();
 
-    // Replace this with actual OTP verification logic
-    if (otp === otp) { // Example: Hardcoded OTP for demonstration
-      alert("OTP verified successfully! Please reset your password.");
-      setIsOtpVerified(true);
-    } else {
-      alert("Invalid OTP. Please try again.");
-    }
-  };
-
-  const handlePasswordReset = (e) => {
+  const handlePasswordReset = async(e) => {
     e.preventDefault();
 
     if (newPassword !== confirmPassword) {
       alert("Passwords do not match. Please try again.");
       return;
     }
+    try {
+      const response = await fetch("https://e-mail-auth.onrender.com/user/resetPassword/:userId/:resetString", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+        newPassword,
+        confirmPassword,
+        }),
+      });
+      // console.log(response.status)
+      console.log(response)
 
-    // Backend password reset logic goes here
+       await response.json();
+    } catch (error) {
+      console.error("Error during signup:", error);
+      alert("An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  
     alert("Password reset successfully! Redirecting to login page.");
     navigate("/login");
   };
@@ -51,33 +59,7 @@ const ResetPassword = () => {
       <div className="cont">
         <img src={forgotpass} alt="Forgot Password" srcSet="" />
         <div className="forgot-password-container">
-          {!isOtpVerified ? (
-            <>
-              <h2 className="forgot-title">Enter OTP</h2>
-              <p className="forgot-description">
-                Please enter the OTP <br />{" "}
-                <address>sent to your registered email address.</address>
-              </p>
-              <form onSubmit={handleOtpSubmit} className="forgot-form">
-                <input
-                  type="text"
-                  id="otp"
-                  value={otp}
-                  onChange={(e) => setOtp(e.target.value)}
-                  placeholder="Enter OTP"
-                  required
-                />
-                <button type="submit" className="forgot-btn" >
-                  Verify OTP
-                </button>
-              </form>
-              <p className="back-to-login">
-                Remembered your password?{" "}
-                <a href="/login">Back to Login</a>
-              </p>
-            </>
-          ) : (
-            <>
+         
               <h2 className="forgot-title">Reset Password</h2>
               <form onSubmit={handlePasswordReset} className="forgot-form">
                 <input
@@ -100,8 +82,7 @@ const ResetPassword = () => {
                   Reset Password
                 </button>
               </form>
-            </>
-          )}
+          
         </div>
       </div>
     </div>

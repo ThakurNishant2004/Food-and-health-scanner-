@@ -1,0 +1,195 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef4fb;
+  }
+  
+ 
+  .header {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1vh 3vw;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+    color: black;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 5vh 0vw;
+    gap: 3rem;
+  }
+  
+
+  .black-box {
+    background-color: black;
+    width: 70vw;
+    height: 80vh;
+    border-radius: 10px;
+  }
+
+  .floating-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  
+  .circle-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #e0e0e0;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+  }
+  
+  .chatbot {
+    object-fit: contain;
+    position: relative;
+    z-index: 1; 
+  }
+  
+  
+  .circle-btn:hover {
+    background-color: #ccc;
+  }
+  .ocr-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .ocr-button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    /* padding: 10px 20px; */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .ocr-button:hover {
+    background-color: #45a049; /* Slightly darker green */
+    transform: translateY(-2px);
+  }
+  
+  .ocr-button:active {
+    background-color: #388e3c; /* Even darker green */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+
+  
+  .image-preview {
+    place-self: center;
+    width: 60vw;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center;    /* Center the image vertically if the container has a height */
+    margin-top: 20px;       /* Add some spacing above the image */
+    padding: 20px;          /* Add padding around the image */
+    background-color: #c5d5f82d; /* Light background for better contrast */
+    border: 1px solid #bfa7a7; /* Optional: border to highlight the image area */
+    border-radius: 10px;    /* Rounded corners for the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .image-preview img {
+    max-width: 80%;       /* Ensure the image fits within the container */
+    max-height: 300px;     /* Limit the image height */
+    border-radius: 8px;    /* Slightly round the image edges */
+  }
+   
+
+   @media (max-width: 800px) {
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .nav {
+      gap: 10px;
+    }
+  
+    .nav a {
+      font-size: 0.9rem;
+    }
+  
+    .main-content {
+      flex-direction: column;
+      margin: 3vh 5vw;
+      gap: 2rem;
+    }
+  
+    .black-box {
+      width: 90vw;
+      height: 70vh;
+    }
+  
+    .floating-buttons {
+      flex-direction: row; /* Change to row for better horizontal alignment */
+      gap: 1vw;
+      justify-content: center; /* Center the buttons */
+    }
+  
+    .circle-btn {
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+    }
+    .ocr-button{
+      font-size: 0.8em;
+    }
+  }
+  @media screen and (800px<width<1300px) {
+    .main-content {
+      margin: 6vh 10.2vw;
+    }
+  }
+  @media  screen and (max-width:400px) {
+    .floating-buttons{
+      width: 90vw;
+      gap: 7vw;
+    }
+    
+  }
