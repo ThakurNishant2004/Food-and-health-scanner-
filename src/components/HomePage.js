@@ -143,7 +143,9 @@ const HomePage = () => {
                   ref={webcamRef}
                   screenshotFormat="image/png"
                   videoConstraints={{
-                    facingMode: "environment", // Use the rear camera by default on mobile
+                    width: 1920, // Higher width for better resolution
+                    height: 1080, // Higher height for better resolution
+                    facingMode: "environment", // Use rear camera
                   }}
                   className="camera-feed"
                 />
