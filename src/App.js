@@ -6,6 +6,7 @@ import Login from "./components/login";
 import ForgotPassword from "./components/ForgotPassword";
 import ResetPassword from "./components/ResetPassword";
 import HomePage from "./components/HomePage";
+import Profile from "./components/Profile";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/ForgotPassword" element={<ForgotPassword/>} />
         <Route path="/ResetPassword" element={<ResetPassword/>} />
         <Route path="/HomePage" element={<HomePage/>} />
+        <Route path="/Profile" element={<Profile/>} />
        </Routes>
      </BrowserRouter>
     </>
