@@ -75,7 +75,6 @@ const HomePage = () => {
         fetch(imageSrc)
           .then((res) => res.blob())
           .then((blob) => {
-            console.log("Image Blob:", blob);
             performOCR(blob); // Perform OCR
           })
           .catch((error) => console.error("Blob conversion error:", error));
@@ -85,16 +84,17 @@ const HomePage = () => {
     }
   };
 
-
-  
   const performOCR = (imageFile) => {
     setLoading(true);
-    Tesseract.recognize(imageFile, "eng", {
-      logger: (info) => console.log("OCR Progress:", info),
-      tessedit_char_whitelist: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-    })
+    Tesseract.recognize(
+      imageFile,
+      "eng",
+      {
+        logger: (info) => console.log("OCR Progress:", info),
+      }
+    )
       .then(({ data: { text } }) => {
-        setOcrText(text);
+        setOcrText(text); // Update OCR result
       })
       .catch((error) => {
         console.error("OCR Error:", error);
@@ -102,7 +102,6 @@ const HomePage = () => {
       .finally(() => {
         setLoading(false);
       });
-    
   };
 
   const renderOcrButtons = () => {
@@ -144,8 +143,6 @@ const HomePage = () => {
                   ref={webcamRef}
                   screenshotFormat="image/png"
                   videoConstraints={{
-                    width: 1280,
-                    height: 720,
                     facingMode: "environment", // Use the rear camera by default on mobile
                   }}
                   className="camera-feed"
