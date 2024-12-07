@@ -17,7 +17,7 @@ const HomePage = () => {
   const webcamRef = useRef(null);
   const fileInputRef = useRef(null);
 
-  // Camera access with mediaDevices
+ 
   useEffect(() => {
     const requestCameraAccess = async () => {
       try {
@@ -32,14 +32,14 @@ const HomePage = () => {
       }
     };
 
-    requestCameraAccess(); // Try to get camera access
+    requestCameraAccess(); 
   }, []);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       setSelectedImage(URL.createObjectURL(file));
-      setCameraActive(false); // Deactivate the camera when an image is uploaded
+      setCameraActive(false); 
       performOCR(file);
     }
   };
@@ -52,30 +52,29 @@ const HomePage = () => {
 
   const handleCameraClick = () => {
     if (cameraActive) {
-      captureImage(); // Capture image if the camera is active
+      captureImage(); 
     } else {
-      // Toggle camera activation
       setCameraActive(true);
-      setOcrText(""); // Clear previous OCR results
-      setSelectedImage(null); // Clear previous image
+      setOcrText(""); 
+      setSelectedImage(null); 
     }
   };
 
   const captureImage = () => {
     if (webcamRef.current) {
-      // Clear previous OCR text
+
       setOcrText("");
 
-      // Capture image from webcam
+     
       const imageSrc = webcamRef.current.getScreenshot();
       if (imageSrc) {
-        setSelectedImage(imageSrc); // Update image state
+        setSelectedImage(imageSrc);
 
-        // Convert base64 image to Blob for OCR processing
+      
         fetch(imageSrc)
           .then((res) => res.blob())
           .then((blob) => {
-            performOCR(blob); // Perform OCR
+            performOCR(blob); 
           })
           .catch((error) => console.error("Blob conversion error:", error));
       } else {
@@ -94,7 +93,7 @@ const HomePage = () => {
       }
     )
       .then(({ data: { text } }) => {
-        setOcrText(text); // Update OCR result
+        setOcrText(text);
       })
       .catch((error) => {
         console.error("OCR Error:", error);
@@ -117,15 +116,15 @@ const HomePage = () => {
   };
 
   const handleBackClick = () => {
-    setCameraActive(true); // Activate camera view again
-    setOcrText(""); // Clear OCR result
-    setSelectedImage(null); // Clear the captured image
+    setCameraActive(true); 
+    setOcrText(""); 
+    setSelectedImage(null); 
   };
 
   return (
     <div className="app">
       <header className="header">
-        <h1>NutriTrack</h1>
+        <h1 id="heading">NutriTrack</h1>
         <nav className="nav">
           <a href="#home">Home</a>
           <a href="#profile" onClick={()=>navigate("/Profile")}>Profile</a>
@@ -143,9 +142,9 @@ const HomePage = () => {
                   ref={webcamRef}
                   screenshotFormat="image/png"
                   videoConstraints={{
-                    width: 1920, // Higher width for better resolution
-                    height: 1080, // Higher height for better resolution
-                    facingMode: "environment", // Use rear camera
+                    width: 1920,
+                    height: 1080, 
+                    facingMode: "environment", 
                   }}
                   className="camera-feed"
                 />

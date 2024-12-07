@@ -1,3 +1,4 @@
+
 .nav-btn {
   background-color: #fff;
   color: black;
@@ -5,8 +6,13 @@
   border-radius: 0.4em;
   padding: 0.5em 1.4em;
   margin-left: 1em;
+  font-size: 1.2rem;
+  font-weight: 200;
 }
-
+.nav-btn1{
+  background-color: #CC6164;
+  color: #fff;
+}
 
 .head {
   display: flex;
@@ -36,7 +42,8 @@
 
 .ph1 {
   text-align: right;
-  align-items: flex-start;
+  margin-top: -13vh;
+  margin-bottom: 25vh;
 }
 
 .enter-page {
@@ -50,6 +57,7 @@
 
 .pt1 {
   font-size: 2.1em;
+
 }
 
 .pt3 {
@@ -69,7 +77,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #EBF3FA;
-
+ background-position-x: 42%;
 }
 
 .page3 {
@@ -84,7 +92,9 @@
 }
 
 .p1-cont {
+  margin-left: 7vw;
   text-align: right;
+ 
 }
 
 .content2 {
@@ -114,6 +124,7 @@ button {
   border-radius: 5px;
   color: white;
   cursor: pointer;
+ background-color: #fff;
 }
 
 button:hover {
@@ -122,12 +133,16 @@ button:hover {
 
 .pt5 {
   margin-bottom: 25vh;
+  font-size: 2.3em;
 }
 
 .submit-btn {
   background-color: #CC6164;
+  border: 1px solid #000000;
   border-radius: 6px;
-  padding: 0.7em 3em;
+  margin-left: 11vw;
+  font-size: 1.5em;
+  padding: 2vh 5vw;
 }
 
 .last-cont {
@@ -136,7 +151,7 @@ button:hover {
 
 .footer {
   background-color: #361717;
-  height: 17vh;
+  height: 20vh;
   display: flex;
   place-items: center;
   justify-content: space-around;
@@ -150,15 +165,20 @@ button:hover {
 }
 
 .lists {
+  margin-left: -10vw;
   display: flex;
 }
 
 #L-i>li {
-  list-style-type: circle;
+  list-style: none;
+   line-height: 2;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
+  .page2{
+    background-position-x: 44%;
+  }
   .head {
     align-items: center;
     column-gap: 0;
@@ -172,16 +192,18 @@ button:hover {
     margin-left: -68vw;
   }
   #heading {
-    font-size: 2em;
+    font-size: 4em;
   }
 
   .nav-btn {
+    margin-right: 0.6em;
+    font-size: 2em;
     margin-left: 0;
-    padding: 0.5em 1em;
+    padding: 0.4em 1.2em;
   }
 
   .screen1 {
-    font-size: 2.5em;
+    font-size: 4em;
   }
   .content h1 {
     font-size: 3rem;
@@ -196,9 +218,11 @@ button:hover {
     margin: 1.5em auto;
   }
 
-  button {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
+  .submit-btn {
+    background-color: #CC6164;
+    margin-left: 11vw;
+    font-size: 1.5em;
+    padding: 2vh 5vw;
   }
 
   .footer {
@@ -233,6 +257,10 @@ button:hover {
 @media only screen and (width<500px) {
     .content2{
        margin-left: -59vh;
-
     }
+}
+@media only screen and (540px<width<800px){
+  .btns{
+    display: flex;
+  }
 }

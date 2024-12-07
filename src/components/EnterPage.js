@@ -14,8 +14,8 @@ const EnterPage = () => {
       <nav className="head">
             <p id="heading">NutriTrack</p>
             <div className="btns">
-            <button className="nav-btn" onClick={()=>navigate("/Signup")}>Signup</button>
-            <button className="nav-btn" onClick={()=>navigate("/login")}>Login</button>
+            <button className="nav-btn nav-btn2" onClick={()=>navigate("/login")}>Sign in</button>
+            <button className="nav-btn nav-btn1" onClick={()=>navigate("/Signup")}>Sign up</button>
             </div>
       </nav>
       <div className="screen1">
@@ -33,7 +33,7 @@ const EnterPage = () => {
     <div className="page2">
     <div className="enter-page e-p2">
       <div className="content content2">
-        <h1>Stay healthy and informed</h1>
+        <h1 className="page1-heading">Stay healthy and informed</h1>
         <div className="pt1">Track your intake and make <br /> informed food choices for a <br /> balanced diet.</div>
       </div>
     </div>

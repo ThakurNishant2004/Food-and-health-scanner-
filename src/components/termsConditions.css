@@ -1,0 +1,45 @@
+/* Terms & Conditions Section */
+.terms-and-conditions-section {
+    width: 55vw;
+    padding-top: 1vh ;
+    padding-left: 2.8vw;
+    background-color: #f9f9f9;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin-left: -12vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .terms-and-conditions-section h1 {
+    font-size: 24px;
+    margin-bottom: 4vh;
+    color: #333;
+  }
+  .terms-and-conditions-section h3 {
+    line-height: 0.4;
+  }
+  
+  .terms-and-conditions-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .terms-and-conditions-section {
+      padding: 15px;
+      margin: 10px;
+    }
+  
+    .terms-and-conditions-section h1 {
+      font-size: 20px;
+    }
+  
+    .terms-and-conditions-section  {
+      font-size: 14px;
+    }
+  }
+  

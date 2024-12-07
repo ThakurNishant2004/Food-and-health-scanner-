@@ -1,0 +1,80 @@
+/* Edit Profile Section */
+.edit-profile-section {
+  max-width: 31.6vw;
+  padding: 1.7em;
+  padding-right: 2.7em;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: #EBF3FA;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.edit-profile-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-profile-form label {
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+.edit-profile-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000d6;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.edit-profile-form input:focus {
+  border-color: #28a745;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #28a745;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button.cancel-btn {
+  background-color: #dc3545;
+}
+
+button.cancel-btn:hover {
+  background-color: #c82333;
+}

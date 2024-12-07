@@ -9,6 +9,7 @@ import HomePage from "./components/HomePage";
 import Profile from "./components/Profile";
 
 
+
 const App = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/ResetPassword" element={<ResetPassword/>} />
         <Route path="/HomePage" element={<HomePage/>} />
         <Route path="/Profile" element={<Profile/>} />
+        
        </Routes>
      </BrowserRouter>
     </>
