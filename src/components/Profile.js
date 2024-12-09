@@ -89,17 +89,18 @@ const Profile = () => {
   };
 
   return (
-    <div className="ProfilePage">
-      <header className="head profile-nav">
-        <h1 id="heading">NutriTrack</h1>
-        <nav className="nav">
-          <a href="#home">Home</a>
+    // <div className="ProfilePage">
+      <div>
+        <header className="header head">
+                <h1 id="heading">NutriTrack</h1>
+                <nav className="nav">
+                    <a href="#home" onClick={()=>navigate("/HomePage2")}>Home</a>
           <a href="#profile" onClick={() => setSelectedOption("MyProfile")}>
             Profile
           </a>
           <a href="#contact">Contact us</a>
-        </nav>
-      </header>
+                </nav>
+            </header>
       <div className="profile-container">
         {/* Profile Options */}
         <div className="profile-options-container">
@@ -372,7 +373,7 @@ Address: 123 Innovation Street, Suite 456, Tech City, CA 94016, India</p>
         )}
 
       </div>
-    </div>
+ </div>
   );
 };
 

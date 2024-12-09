@@ -40,7 +40,7 @@ const Login = () => {
   
       if (response.ok) {
         alert(data.message || "Login successful! Redirecting...");
-        navigate("/HomePage"); 
+        navigate("/HomePage2"); 
       } else {
         alert(data.message || "Login failed. Please try again.");
       }
@@ -107,7 +107,7 @@ const Login = () => {
             <p>
               Already have an account?{" "}
               <a href="/Signup" onClick={() => navigate("/Signup")}>
-                Login
+                Signup
               </a>
             </p>
           </div>

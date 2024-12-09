@@ -6,7 +6,6 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: -10vw;
   }
   
   /* Profile Photo Section */
@@ -111,3 +110,182 @@
     background-color: #45a049;
   }
   
+/* Media Queries for Profile Settings Responsiveness */
+
+/* For screens with width up to 1300px */
+@media (max-width: 1300px) {
+  .profile-settings {
+    width: 60vw;
+    margin-left: -5vw; /* Adjust for better centering */
+    padding: 15px;
+  }
+
+  .profile-photo-section {
+    width: 50vw;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-photo-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 5px;
+  }
+
+  .btn-upload, .btn-remove {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .profile-info {
+    width: 50vw;
+    flex-wrap: wrap;
+    padding: 15px;
+    line-height: 2.5vh;
+  }
+
+  .profile-info p {
+    font-size: 18px;
+  }
+
+  .btn-edit {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+/* For screens with width up to 1000px */
+@media (max-width: 1000px) {
+  .profile-settings {
+    width: 100vw;
+    margin-left: 0vw;
+  }
+
+  .profile-photo-section {
+    width: 60vw;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-photo-buttons {
+    gap: 5px;
+  }
+
+  .btn-upload, .btn-remove {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .profile-info {
+    width: 60vw;
+    padding: 15px;
+  }
+
+  .profile-info p {
+    font-size: 16px;
+  }
+
+  .btn-edit {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* For screens with width up to 768px */
+@media (max-width: 768px) {
+  .profile-settings {
+    width: 100vw;
+    margin-left: 1vw;
+    margin-bottom: 1.5vh;
+  }
+
+  .profile-photo-section {
+    width: 80vw;
+    flex-direction: column; /* Stack profile photo and buttons vertically */
+    align-items: center;
+    padding: 10px;
+  }
+
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-photo-buttons {
+    flex-direction: row; /* Keep buttons horizontal for mobile */
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .btn-upload, .btn-remove {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .profile-info {
+    width: 80vw;
+    padding: 10px;
+  }
+
+  .profile-info p {
+    font-size: 14px;
+  }
+
+  .btn-edit {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+/* For screens with width up to 500px (small phones) */
+@media (max-width: 500px) {
+  .profile-settings {
+    width: 100vw;
+    margin-left: 1vw;
+    margin-bottom: 1.5vh;
+  }
+
+  .profile-photo-section {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .profile-photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-photo-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .btn-upload, .btn-remove {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+
+  .profile-info {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .profile-info p {
+    font-size: 12px;
+  }
+
+  .btn-edit {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+}

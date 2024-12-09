@@ -1,0 +1,171 @@
+.food-details {
+    width: 48vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: #333;
+    overflow-y: scroll;
+}
+
+.nutritional-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.detail-box {
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.detail-box span {
+    display: block;
+}
+
+.detail-box .value {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Donut Chart Styles */
+.donut-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.chart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.circular-chart {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.circular-chart .circle-protein {
+    fill: none;
+    stroke: #d9534f; /* Protein color */
+    stroke-width: 2.8;
+}
+
+.circular-chart .circle-carbs {
+    fill: none;
+    stroke: #5bc0de; /* Carbs color */
+    stroke-width: 2.8;
+}
+
+.circular-chart .circle-fat {
+    fill: none;
+    stroke: #5cb85c; /* Fats color */
+    stroke-width: 2.8;
+}
+
+.circular-chart .circle-other {
+    fill: none;
+    stroke: #f0ad4e; /* Other color */
+    stroke-width: 2.8;
+}
+
+.chart .inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Legend Styles */
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.legend-item {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.legend-item:nth-child(1) {
+    background-color: #d9534f; /* Protein color */
+}
+
+.legend-item:nth-child(2) {
+    background-color: #5bc0de; /* Carbs color */
+}
+
+.legend-item:nth-child(3) {
+    background-color: #5cb85c; /* Fats color */
+}
+
+.legend-item:nth-child(4) {
+    background-color: #f0ad4e; /* Other color */
+}
+
+@media (max-width: 1010px){
+    .food-details {
+        width: 70vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        color: #333;
+        overflow-y: scroll;
+    }
+}
+@media (max-width: 500px){
+    .food-details {
+        width: 65vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        color: #333;
+        overflow-y: scroll;
+        font-size: 0.8rem;
+    }
+    .food-details h2 {
+        font-size: 1rem;
+        font-stretch:extra-expanded;
+    }
+}
