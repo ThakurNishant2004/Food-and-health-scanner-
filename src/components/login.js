@@ -20,7 +20,7 @@ const Login = () => {
     setLoading(true);
 
     console.log("Email:", email);
-    console.log("Password:", password);
+    // console.log("Password:", password);
     console.log("Remember Me:", isRememberMe ? "Yes" : "No");
     try {
       const response = await fetch("https://e-mail-auth.onrender.com/user/login", {

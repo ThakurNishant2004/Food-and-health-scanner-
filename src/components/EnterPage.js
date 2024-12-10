@@ -30,7 +30,7 @@ const EnterPage = () => {
     <div className="enter-page">
         {/* <img className="foodimg" src={onboardingimage1} alt="image" srcset="" /> */}
       <div className="content p1-cont">
-        <div className="ph1"> <h1>Welcome to Food & Health Scanner</h1></div>
+        <div className="ph1"> <h1>Discover Nutrition instantly</h1></div>
         <div className="pt1">Scan your food item to get instant insights <br /> into its calories , proteins , fats , and more.</div>
       </div>
     </div>

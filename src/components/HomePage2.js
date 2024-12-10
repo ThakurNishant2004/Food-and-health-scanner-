@@ -210,27 +210,27 @@ const HomePage = () => {
                     <div className="details-grid">
                         <div className="detail-box">
                             <span>Calories</span>
-                            <span className="value">{foodData.calories || "Data not available"}</span>
+                            <span className="value">{foodData.calories || " (Data not available)"} kcal</span>
                         </div>
                         <div className="detail-box">
                             <span>Protein</span>
-                            <span className="value">{foodData.protein || "Data not available"}</span>
+                            <span className="value">{foodData.protein || "Data not available"} g</span>
                         </div>
                         <div className="detail-box">
                             <span>Carbohydrates</span>
-                            <span className="value">{foodData.carbs || "Data not available"}</span>
+                            <span className="value">{foodData.carbs || "Data not available"} g</span>
                         </div>
                         <div className="detail-box">
                             <span>Fats</span>
-                            <span className="value">{foodData.fat || "Data not available"}</span>
+                            <span className="value">{foodData.fat || "Data not available"} g</span>
                         </div>
                         <div className="detail-box">
                             <span>Sugar</span>
-                            <span className="value">{foodData.sugar || "Data not available"}</span>
+                            <span className="value">{foodData.sugar || "Data not available"} g</span>
                         </div>
                         <div className="detail-box">
                             <span>Fiber</span>
-                            <span className="value">{foodData.dietaryfiber || "Data not available"}</span>
+                            <span className="value">{foodData.dietaryfiber || "Data not available"} g</span>
                         </div>
                     </div>
                 </div>
