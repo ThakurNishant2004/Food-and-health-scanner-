@@ -144,15 +144,15 @@ const HomePage = () => {
 
             setFoodData({
                 name: data.data.Food_Name || sanitizedItem,
-                calories: data.data.Calories || "Data not available",
-                fat: data.data.Fat || "Data not available",
-                carbs: data.data.Carbs || "Data not available",
-                sugar: data.data.Sugar || "Data not available",
-                protein: data.data.Protein || "Data not available",
-                dietaryfiber: data.data.Dietary_fiber || "Data not available",
-                cholesterol: data.data.Cholesterol || "Data not available",
-                iron: data.data.Iron || "Data not available",
-                nutriDensity: data.data.Nutri_Density || "Data not available",
+                calories: data.data.Calories || "0",
+                fat: data.data.Fat || "0",
+                carbs: data.data.Carbs || "0",
+                sugar: data.data.Sugar || "0",
+                protein: data.data.Protein || "0",
+                dietaryfiber: data.data.Dietary_fiber || "0",
+                cholesterol: data.data.Cholesterol || "0",
+                iron: data.data.Iron || "0",
+                nutriDensity: data.data.Nutri_Density || "0",
             });
         } catch (error) {
             console.error("Error fetching food data:", error);
@@ -188,7 +188,6 @@ const HomePage = () => {
     const renderFoodDetails = () => {
         if (!foodData) return null;
 
-        // Calculate percentages based on the fetched data
         const totalCalories = parseFloat(foodData.calories) || 0;
         const proteinCalories = (parseFloat(foodData.protein) || 0) * 4; 
         const carbsCalories = (parseFloat(foodData.carbs) || 0) * 4;
@@ -210,27 +209,27 @@ const HomePage = () => {
                     <div className="details-grid">
                         <div className="detail-box">
                             <span>Calories</span>
-                            <span className="value">{foodData.calories || " (Data not available)"} kcal</span>
+                            <span className="value">{foodData.calories || "0"} kcal</span>
                         </div>
                         <div className="detail-box">
                             <span>Protein</span>
-                            <span className="value">{foodData.protein || "Data not available"} g</span>
+                            <span className="value">{foodData.protein || "0"} g</span>
                         </div>
                         <div className="detail-box">
                             <span>Carbohydrates</span>
-                            <span className="value">{foodData.carbs || "Data not available"} g</span>
+                            <span className="value">{foodData.carbs || "0"} g</span>
                         </div>
                         <div className="detail-box">
                             <span>Fats</span>
-                            <span className="value">{foodData.fat || "Data not available"} g</span>
+                            <span className="value">{foodData.fat || "0"} g</span>
                         </div>
                         <div className="detail-box">
                             <span>Sugar</span>
-                            <span className="value">{foodData.sugar || "Data not available"} g</span>
+                            <span className="value">{foodData.sugar || "0"} g</span>
                         </div>
                         <div className="detail-box">
                             <span>Fiber</span>
-                            <span className="value">{foodData.dietaryfiber || "Data not available"} g</span>
+                            <span className="value">{foodData.dietaryfiber || "0"} g</span>
                         </div>
                     </div>
                 </div>

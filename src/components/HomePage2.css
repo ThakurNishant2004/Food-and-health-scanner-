@@ -199,6 +199,9 @@ html {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.chatbot-image{
+  cursor: pointer;
+}
 
 .food-input {
   flex: 1;
