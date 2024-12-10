@@ -28,8 +28,9 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     .terms-and-conditions-section {
+      width: 100vw;
       padding: 15px;
       margin: 10px;
     }
@@ -43,3 +44,8 @@
     }
   }
   
+  @media (800px<width<1300px){
+  .terms-and-conditions-section{
+    width: 40vw;
+  }
+  }

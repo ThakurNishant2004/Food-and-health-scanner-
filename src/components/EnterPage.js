@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import onboardingimage1 from "../assests/web2.svg"
 // import onboardingimage2 from "../assests/onboarding2.svg"
 import onboardingimage3 from "../assests/web5.svg"
+import logo from "../assests/NutritractLogo.svg"
 import "./EnterPage.css";
 
 const EnterPage = () => {
@@ -19,7 +20,11 @@ const EnterPage = () => {
             </div>
       </nav>
       <div className="screen1">
+        <img src={logo} alt="nutritractLogo" srcset="" />
+        <div className="screen1Text">
         <p>Welcome to NutriTrack</p>
+        <h7>Count Calories and Nutrients by taking Photos</h7>
+        </div>
       </div>
       <div className="page1">
     <div className="enter-page">
@@ -56,7 +61,7 @@ const EnterPage = () => {
               <li>Contact us</li>
             </ul>
            <ul id="L-i">
-              <li>Terms & COnditions</li>
+              <li>Terms & Conditions</li>
               <li>Privacy Policy</li>
             </ul>
             </div>

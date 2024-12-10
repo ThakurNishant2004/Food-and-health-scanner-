@@ -8,12 +8,13 @@ import ResetPassword from "./components/ResetPassword";
 // import HomePage from "./components/HomePage";
  import HomePage2 from "./components/HomePage2";
 import Profile from "./components/Profile";
-
+import { UserProvider } from "./components/userContext";
 
 
 const App = () => {
   return (
     <>
+     <UserProvider>
        <BrowserRouter>
        <Routes>
          <Route path="/" element={<EnterPage />} />
@@ -24,9 +25,9 @@ const App = () => {
         {/* <Route path="/HomePage" element={<HomePage/>} /> */}
         <Route path="/HomePage2" element={<HomePage2/>} />
         <Route path="/Profile" element={<Profile/>} />
-        
        </Routes>
      </BrowserRouter>
+    </UserProvider>
     </>
   );
 };

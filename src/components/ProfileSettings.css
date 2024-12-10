@@ -113,15 +113,21 @@
 /* Media Queries for Profile Settings Responsiveness */
 
 /* For screens with width up to 1300px */
-@media (max-width: 1300px) {
+@media (800px<width<1300px) {
   .profile-settings {
-    width: 60vw;
+    width: 45vw;
     margin-left: -5vw; /* Adjust for better centering */
     padding: 15px;
   }
-
+  .profile-options-container{
+    margin-right: 4vw;
+  }
+  .profile-container{
+    display: flex;
+    flex-direction: row;
+  }
   .profile-photo-section {
-    width: 50vw;
+    width: 30vw;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     gap: 10px;
     padding: 10px;
@@ -143,7 +149,7 @@
   }
 
   .profile-info {
-    width: 50vw;
+    width: 30vw;
     flex-wrap: wrap;
     padding: 15px;
     line-height: 2.5vh;
@@ -160,49 +166,9 @@
 }
 
 /* For screens with width up to 1000px */
-@media (max-width: 1000px) {
-  .profile-settings {
-    width: 100vw;
-    margin-left: 0vw;
-  }
-
-  .profile-photo-section {
-    width: 60vw;
-    justify-content: center;
-    padding: 10px;
-  }
-
-  .profile-photo {
-    width: 90px;
-    height: 90px;
-  }
-
-  .profile-photo-buttons {
-    gap: 5px;
-  }
-
-  .btn-upload, .btn-remove {
-    font-size: 12px;
-    padding: 5px 10px;
-  }
-
-  .profile-info {
-    width: 60vw;
-    padding: 15px;
-  }
-
-  .profile-info p {
-    font-size: 16px;
-  }
-
-  .btn-edit {
-    font-size: 13px;
-    padding: 8px 12px;
-  }
-}
 
 /* For screens with width up to 768px */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .profile-settings {
     width: 100vw;
     margin-left: 1vw;
@@ -256,8 +222,10 @@
   }
 
   .profile-photo-section {
-    width: 95%;
-    padding: 8px;
+    display: flex ;
+            width: 95vw;
+            padding: 8px;
+            flex-direction: row;
   }
 
   .profile-photo {
@@ -266,9 +234,11 @@
   }
 
   .profile-photo-buttons {
+    width: 55vw;
     flex-direction: column;
     gap: 5px;
-  }
+    align-items: baseline;
+}
 
   .btn-upload, .btn-remove {
     font-size: 10px;

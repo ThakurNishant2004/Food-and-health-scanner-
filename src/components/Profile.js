@@ -14,11 +14,11 @@ const Profile = () => {
   const navigate = useNavigate();
 
   const [userDetails, setUserDetails] = useState({
-    name: "Piyush Chauhan",
-    email: "piyush@example.com",
+    name: 'Piyush chauhan',
+    email: "piyushchauhan200417@gmail.com",
     phone: "8882871921",
-    age: 25,
-    weight: "70 kg",
+    age: 20,
+    weight: "50 kg",
     height: "170 cm",
   });
 

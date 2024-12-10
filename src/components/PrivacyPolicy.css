@@ -27,9 +27,9 @@
     color: #555;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     .privacy-and-policy-section {
+      width: 100vw;
       padding: 15px;
       margin: 10px;
     }
@@ -41,5 +41,11 @@
     .privacy-and-policy-section  {
       font-size: 14px;
     }
+  }
+  
+  @media (800px<width<1300px){
+  .privacy-and-policy-section{
+    width: 40vw;
+  }
   }
   

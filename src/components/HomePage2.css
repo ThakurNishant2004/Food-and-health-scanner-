@@ -522,15 +522,18 @@ html {
     .header h1 {
       font-size: 1.3rem;
     }
-    .header {
-      margin-right: -4.2vw;
-      column-gap: 4.5vw;
-      padding: 1vh 0vw;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: baseline;
-      justify-content: space-evenly;
-    }
+    @media (300px < width < 500px) {
+      .header {
+          width: 123vw;
+          margin-right: -4.2vw;
+          column-gap: 4.5vw;
+          padding: 1vh 0vw;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: baseline;
+          justify-content: space-evenly;
+      }
+  }
     #heading{
       font-size: 2.5rem;
       font-weight: 520;

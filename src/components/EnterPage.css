@@ -2,12 +2,20 @@
 .nav-btn {
   background-color: #fff;
   color: black;
-  border: 1.5px solid;
+  border: 1px solid #000000;
   border-radius: 0.4em;
   padding: 0.5em 1.4em;
   margin-left: 1em;
   font-size: 1.2rem;
   font-weight: 200;
+}
+.nav-btn2:hover{
+  background-color: #CC6164;
+  color:#fff;
+}
+.nav-btn1:hover{
+  background-color: #EBF3FA;
+  color: #000000;
 }
 .nav-btn1{
   background-color: #CC6164;
@@ -32,12 +40,23 @@
 }
 
 .screen1 {
-  height: 88vh;
+  height: 105vh;
+  margin-top: -14vh;
   background-color: #EBF3FA;
-  place-content: center;
   text-align: center;
-  margin: 0;
-  font-size: 4em;
+  place-content: center;
+  line-height: 0.1;
+}
+.screen1Text{
+  text-align: left center;
+}
+.screen1Text>h7{
+  font-weight: 50;
+  font-size: 2.5rem;
+}
+.screen1Text>p{
+  font-weight: 400;
+  font-size: 4rem;
 }
 
 .ph1 {
