@@ -1,4 +1,3 @@
-/* Terms & Conditions Section */
 .terms-and-conditions-section {
     width: 55vw;
     padding-top: 1vh ;
@@ -27,7 +26,6 @@
     color: #555;
   }
   
-  /* Responsive Design */
   @media (max-width: 800px) {
     .terms-and-conditions-section {
       width: 100vw;

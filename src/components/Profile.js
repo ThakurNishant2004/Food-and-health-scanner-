@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Profile.css"; // Styles for the profile page
-import "./EditProfile.css"; // Styles for editing
+import "./Profile.css"; 
+import "./EditProfile.css"; 
 import "./ProfileSettings.css";
 import "./termsConditions.css"
 import "./PrivacyPolicy.css"
 import { useNavigate } from "react-router-dom";
-import profileImage from "../assests/profile.svg"; // Placeholder for profile picture
+import profileImage from "../assests/profile.svg"; 
 import profile2 from "../assests/profile2.svg"
 import emailicon from "../assests/email-Icon.svg"
 
@@ -22,11 +22,10 @@ const Profile = () => {
     height: "170 cm",
   });
 
-  const [isEditing, setIsEditing] = useState(false); // State to toggle between viewing and editing
-  const [selectedOption, setSelectedOption] = useState("MyProfile"); // State to track which section to display
-  const [profileImg, setProfileImg] = useState(profileImage); // State to handle profile image
+  const [isEditing, setIsEditing] = useState(false); 
+  const [selectedOption, setSelectedOption] = useState("MyProfile"); 
+  const [profileImg, setProfileImg] = useState(profileImage); 
 
-  // Mock user details retrieval, replace with actual API call if needed
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
@@ -62,7 +61,7 @@ const Profile = () => {
 
       if (response.ok) {
         alert("Profile updated successfully!");
-        setIsEditing(false); // Exit edit mode
+        setIsEditing(false); 
       } else {
         console.error("Failed to update profile");
       }
@@ -76,15 +75,14 @@ const Profile = () => {
     setUserDetails({ ...userDetails, [name]: value });
   };
 
-  // Handle profile image change
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setProfileImg(reader.result); // Set the selected image as the profile picture
+        setProfileImg(reader.result); 
       };
-      reader.readAsDataURL(file); // Read the file as a data URL
+      reader.readAsDataURL(file); 
     }
   };
 
@@ -199,7 +197,7 @@ const Profile = () => {
                 <button
                   onClick={() => {
                     setIsEditing(true);
-                    setSelectedOption("MyProfile"); // Switch to "MyProfile" where the edit form is rendered
+                    setSelectedOption("MyProfile"); 
                   }}
                 >
                   Edit Profile

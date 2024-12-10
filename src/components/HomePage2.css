@@ -57,7 +57,7 @@ html {
   border: 4px dashed #000000;
   border-radius: 18px;
   margin-bottom: 3vh;
-  overflow: hidden; /* Ensure OCR doesn't overflow */
+  overflow: hidden;
 }
 .back-btn{
   position: fixed2;
@@ -81,12 +81,12 @@ html {
     padding: 10px;
     background-color: white;
     box-sizing: border-box;
-    overflow-y: auto; /* Allow scrolling if OCR content exceeds */
+    overflow-y: auto;
     overflow-x: auto;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -129,8 +129,8 @@ html {
 
 .back-btn {
   position: absolute;
-  bottom: 10px; /* Position it 10px from the bottom */
-  right: 10px;  /* Position it 10px from the right */
+  bottom: 10px; 
+  right: 10px; 
   background-color: #CC6164;
   color: white;
   border: 1px solid #000000;
@@ -210,9 +210,7 @@ html {
 .search-btn:hover {
   background-color: #004d99;
 }
-/* Media Queries for Responsiveness */
 
-/* For screens with width up to 1000px */
 @media (1000px<width<1400px) {
   .search-bar {
     width: 64vw;
@@ -241,12 +239,12 @@ html {
     padding: 10px;
     background-color: white;
     box-sizing: border-box;
-    overflow-y: auto; /* Allow scrolling if OCR content exceeds */
+    overflow-y: auto; 
     overflow-x: auto;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: flex-start; 
     align-items: center;
   }
 }
@@ -342,7 +340,6 @@ html {
     }
   }
   
-  /* For screens with width up to 768px (Tablets and large phones) */
   @media (max-width: 800px) {
     .header {
       margin-right: -2.8vw;
@@ -417,11 +414,10 @@ html {
     }
   }
   
-  /* For screens with width up to 600px (Mobile devices) */
   @media (max-width: 600px) {
     body,
     html {
-      font-size: 14px; /* Reduce base font size for mobile */
+      font-size: 14px; 
     }
     #heading{
       font-size: 3rem;
@@ -457,7 +453,7 @@ html {
   
     .camera-section {
       width: 70%;
-      height: 65vh;  /* Ensure camera takes up full section height */
+      height: 65vh; 
     }
   
     .camera-container {
@@ -514,7 +510,6 @@ html {
     }
   }
   
-  /* For screens with width up to 400px (Small mobile devices) */
   @media (300px <width< 500px) {
     .main-content{
       margin-left: -5vw;

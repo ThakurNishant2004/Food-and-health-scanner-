@@ -7,8 +7,8 @@
   background-color: #f9f9f9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  column-gap: 10vw; /* Reduced for better spacing */
-  flex-wrap: wrap; /* Ensure flexibility on all screen sizes */
+  column-gap: 10vw;
+  flex-wrap: wrap; 
 }
 
 .head {
@@ -17,10 +17,10 @@
 
 .profile-header {
   display: flex;
-  justify-content: space-around; /* Better spacing between items */
+  justify-content: space-around; 
   align-items: center;
   margin-bottom: 4vh;
-  flex-wrap: wrap; /* Allow items to wrap if needed */
+  flex-wrap: wrap; 
 }
 
 .profile-title {
@@ -131,19 +131,18 @@
   color: #007bff;
 }
 
-/* Media Query for Responsive Design (up to 800px) */
 @media (max-width: 800px) {
   .profile-container {
     flex-direction: column-reverse;
     padding: 10px;
     column-gap: 0;
-    width: 100%; /* Utilize full width on smaller screens */
+    width: 100%; 
     margin-bottom: 0;
     min-height: 89vh;
   }
 
   .profile-header {
-    flex-direction: row; /* Stack header elements vertically */
+    flex-direction: row; 
     margin-bottom: 3vh;
   }
 
@@ -162,7 +161,7 @@
   }
 
   .section2 {
-    width: 100%; /* Expand section width */
+    width: 100%; 
     margin-bottom: 15px;
   }
 
@@ -176,7 +175,7 @@
   }
 
   .profile-options-container {
-    width: 100%; /* Full width for options container */
+    width: 100%; 
   }
 
   .profile-options li {
@@ -192,7 +191,6 @@
     font-size: 18px;
   }
 }
-/* Media Query for Screens Between 800px and 1300px */
 @media (max-width: 1300px) and (min-width: 801px) {
   .profile-container {
     flex-wrap: wrap;
@@ -229,7 +227,7 @@
   }
 
   .profile-options-container {
-    width: 40vw; /* Adjusted to better fit medium screens */
+    width: 40vw;
   }
 
   .profile-options li {

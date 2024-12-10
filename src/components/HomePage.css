@@ -112,10 +112,9 @@ body, html {
   }
   
   .ocr-button {
-    background-color: #4CAF50; /* Green color */
+    background-color: #4CAF50; 
     color: white;
     border: none;
-    /* padding: 10px 20px; */
     font-size: 16px;
     font-weight: bold;
     text-transform: capitalize;
@@ -126,12 +125,12 @@ body, html {
   }
   
   .ocr-button:hover {
-    background-color: #45a049; /* Slightly darker green */
+    background-color: #45a049;
     transform: translateY(-2px);
   }
   
   .ocr-button:active {
-    background-color: #388e3c; /* Even darker green */
+    background-color: #388e3c;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transform: translateY(0);
   }
@@ -141,20 +140,20 @@ body, html {
     place-self: center;
     width: 60vw;
     display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center;    /* Center the image vertically if the container has a height */
-    margin-top: 20px;       /* Add some spacing above the image */
-    padding: 20px;          /* Add padding around the image */
-    background-color: #c5d5f82d; /* Light background for better contrast */
-    border: 1px solid #bfa7a7; /* Optional: border to highlight the image area */
-    border-radius: 10px;    /* Rounded corners for the container */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    justify-content: center; 
+    align-items: center;   
+    margin-top: 20px;      
+    padding: 20px;         
+    background-color: #c5d5f82d; 
+    border: 1px solid #bfa7a7; 
+    border-radius: 10px;   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
   .image-preview img {
-    max-width: 80%;       /* Ensure the image fits within the container */
-    max-height: 300px;     /* Limit the image height */
-    border-radius: 8px;    /* Slightly round the image edges */
+    max-width: 80%;       
+    max-height: 300px;    
+    border-radius: 8px;   
   }
   .back-button {
     background-color: #a38181;
@@ -196,9 +195,9 @@ body, html {
     }
   
     .floating-buttons {
-      flex-direction: row; /* Change to row for better horizontal alignment */
+      flex-direction: row; 
       gap: 1vw;
-      justify-content: center; /* Center the buttons */
+      justify-content: center;
     }
   
     .circle-btn {

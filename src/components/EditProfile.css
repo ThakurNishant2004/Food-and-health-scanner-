@@ -1,4 +1,4 @@
-/* Edit Profile Section */
+
 .edit-profile-section {
   max-width: 31.6vw;
   padding: 1.7em;
@@ -18,7 +18,6 @@
   font-weight: bold;
 }
 
-/* Form Styling */
 .edit-profile-form {
   display: flex;
   flex-direction: column;
@@ -48,7 +47,6 @@
   background-color: #fff;
 }
 
-/* Form Actions */
 .form-actions {
   display: flex;
   justify-content: space-between;

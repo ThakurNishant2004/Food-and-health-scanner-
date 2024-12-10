@@ -14,7 +14,7 @@ const HomePage = () => {
     const [cameraActive, setCameraActive] = useState(true);
     const [initialScreen, setInitialScreen] = useState(true);
     const [foodData, setFoodData] = useState(null);
-    const [searchQuery, setSearchQuery] = useState(""); // For search bar input
+    const [searchQuery, setSearchQuery] = useState(""); 
     const webcamRef = useRef(null);
     const fileInputRef = useRef(null);
 
@@ -188,11 +188,11 @@ const HomePage = () => {
     const renderFoodDetails = () => {
         if (!foodData) return null;
 
-        // Example: Calculate percentages based on the fetched data
+        // Calculate percentages based on the fetched data
         const totalCalories = parseFloat(foodData.calories) || 0;
-        const proteinCalories = (parseFloat(foodData.protein) || 0) * 4; // 1g protein = 4 kcal
-        const carbsCalories = (parseFloat(foodData.carbs) || 0) * 4; // 1g carbs = 4 kcal
-        const fatCalories = (parseFloat(foodData.fat) || 0) * 9; // 1g fat = 9 kcal
+        const proteinCalories = (parseFloat(foodData.protein) || 0) * 4; 
+        const carbsCalories = (parseFloat(foodData.carbs) || 0) * 4;
+        const fatCalories = (parseFloat(foodData.fat) || 0) * 9; 
         const otherCalories = totalCalories - (proteinCalories + carbsCalories + fatCalories);
 
         const total = proteinCalories + carbsCalories + fatCalories + Math.max(otherCalories, 0);
