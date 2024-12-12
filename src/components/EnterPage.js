@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import onboardingimage1 from "../assests/web2.svg"
+// import onboardingimage1 from "../assests/web1new.svg"
 // import onboardingimage2 from "../assests/onboarding2.svg"
 import onboardingimage3 from "../assests/web5.svg"
 import logo from "../assests/NutritractLogo.svg"
@@ -28,7 +28,7 @@ const EnterPage = () => {
       </div>
       <div className="page1">
     <div className="enter-page">
-        {/* <img className="foodimg" src={onboardingimage1} alt="image" srcset="" /> */}
+        {/* <img className="foodimg1" src={onboardingimage1} alt="image" srcset="" /> */}
       <div className="content p1-cont">
         <div className="ph1"> <h1>Discover Nutrition instantly</h1></div>
         <div className="pt1">Scan your food item to get instant insights <br /> into its calories , proteins , fats , and more.</div>

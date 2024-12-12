@@ -9,6 +9,7 @@ import ResetPassword from "./components/ResetPassword";
  import HomePage2 from "./components/HomePage2";
 import Profile from "./components/Profile";
 import { UserProvider } from "./components/userContext";
+// import Chatbot from "./components/chatbot";
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         {/* <Route path="/HomePage" element={<HomePage/>} /> */}
         <Route path="/HomePage2" element={<HomePage2/>} />
         <Route path="/Profile" element={<Profile/>} />
+        {/* <Route path="/chatbot" element={<Chatbot/>} /> */}
        </Routes>
      </BrowserRouter>
     </UserProvider>

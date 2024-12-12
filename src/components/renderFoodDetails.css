@@ -59,6 +59,7 @@
 }
 
 .circular-chart {
+    border-radius: 100%;
     width: 100%;
     height: 100%;
     transform: rotate(-90deg);
@@ -67,25 +68,25 @@
 .circular-chart .circle-protein {
     fill: none;
     stroke: #d9534f; 
-    stroke-width: 2.8;
+    stroke-width: 10.8;
 }
 
 .circular-chart .circle-carbs {
     fill: none;
     stroke: #5bc0de;
-    stroke-width: 2.8;
+    stroke-width: 10.8;
 }
 
 .circular-chart .circle-fat {
     fill: none;
     stroke: #5cb85c; 
-    stroke-width: 2.8;
+    stroke-width: 10.8;
 }
 
 .circular-chart .circle-other {
     fill: none;
     stroke: #f0ad4e; 
-    stroke-width: 2.8;
+    stroke-width: 10.8;
 }
 
 .chart .inner-circle {

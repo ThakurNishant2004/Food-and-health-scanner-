@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
 
-    console.log("Email:", email);
+    // console.log("Email:", email);
     // console.log("Password:", password);
     console.log("Remember Me:", isRememberMe ? "Yes" : "No");
     try {

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Webcam from "react-webcam";
 import Tesseract from "tesseract.js";
 import "./HomePage2.css";
+import "./chatbot.css"
 import "./renderFoodDetails.css";
 import { useNavigate } from "react-router-dom";
 import chatbotImage from "../assests/chatbot2.svg";
@@ -14,9 +15,13 @@ const HomePage = () => {
     const [cameraActive, setCameraActive] = useState(true);
     const [initialScreen, setInitialScreen] = useState(true);
     const [foodData, setFoodData] = useState(null);
-    const [searchQuery, setSearchQuery] = useState(""); 
+    const [searchQuery, setSearchQuery] = useState("");
     const webcamRef = useRef(null);
     const fileInputRef = useRef(null);
+    const [isChatbotOpen, setIsChatbotOpen] = useState(false); // Added state for chatbot visibility
+    const [messages, setMessages] = useState([{ text: "Hello! How can I assist you today?", sender: "bot" }]);
+    const [userInput, setUserInput] = useState("");
+
 
     useEffect(() => {
         const requestCameraAccess = async () => {
@@ -100,6 +105,20 @@ const HomePage = () => {
             .finally(() => {
                 setLoading(false);
             });
+    };
+    const toggleChatbot = () => {
+        setIsChatbotOpen(!isChatbotOpen); // Toggle chatbot visibility
+    };
+    const handleSendMessage = () => {
+        if (userInput.trim() === "") return; // Prevent sending empty messages
+
+        const newMessages = [...messages, { text: userInput, sender: "user" }];
+
+        // Mock a bot reply (replace with dynamic responses if needed)
+        const botReply = { text: "I'm here to help with your queries!", sender: "bot" };
+
+        setMessages([...newMessages, botReply]); // Update messages
+        setUserInput(""); // Clear input
     };
 
     const fetchFoodData = async (foodItem) => {
@@ -189,9 +208,9 @@ const HomePage = () => {
         if (!foodData) return null;
 
         const totalCalories = parseFloat(foodData.calories) || 0;
-        const proteinCalories = (parseFloat(foodData.protein) || 0) * 4; 
+        const proteinCalories = (parseFloat(foodData.protein) || 0) * 4;
         const carbsCalories = (parseFloat(foodData.carbs) || 0) * 4;
-        const fatCalories = (parseFloat(foodData.fat) || 0) * 9; 
+        const fatCalories = (parseFloat(foodData.fat) || 0) * 9;
         const otherCalories = totalCalories - (proteinCalories + carbsCalories + fatCalories);
 
         const total = proteinCalories + carbsCalories + fatCalories + Math.max(otherCalories, 0);
@@ -322,11 +341,11 @@ const HomePage = () => {
                     <div className="camera-section">
                         {foodData ? (
                             <>
-                           {renderFoodDetails()} 
-                            <button className="back-btn" onClick={handleBackClick}>
-                            Back to Camera
-                        </button>
-                        </>
+                                {renderFoodDetails()}
+                                <button className="back-btn" onClick={handleBackClick}>
+                                    Back to Camera
+                                </button>
+                            </>
                         ) : (
                             <>
                                 {cameraActive && (
@@ -364,7 +383,7 @@ const HomePage = () => {
                                                 <button className="back-btn" onClick={handleBackClick}>
                                                     Back to Camera
                                                 </button>
-                                                
+
                                             </>
                                         )}
                                     </div>
@@ -397,17 +416,64 @@ const HomePage = () => {
                                     className="food-input"
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') {
+                                            handleSearch(); 
+                                        }
+                                    }}
                                 />
                                 <button className="search-btn" onClick={handleSearch}>
                                     Search
                                 </button>
                             </div>
                             <div className="chatbot-image">
-                                <img src={chatbotImage} alt="chatbot" />
+                                <img src={chatbotImage} alt="chatbot" onClick={toggleChatbot} />
                             </div>
                         </div>
                     </div>
                 </div>
+                {isChatbotOpen && (
+                    <div className="chatbot-modal">
+                        <div className="chatbot-header">
+                            <h3>Assistant</h3>
+                            <button className="close-btn" onClick={toggleChatbot}>
+                                ✖
+                            </button>
+                        </div>
+                        <div className="chatbot-body">
+                            <div className="chatbot-messages">
+                                {messages.map((message, index) => (
+                                    <div
+                                        key={index}
+                                        className={`message ${message.sender}`}
+                                    >
+                                        {message.text}
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="chatbot-input">
+                                <input
+                                    type="text"
+                                    placeholder="Ask me anything..."
+                                    className="chat-input"
+                                    value={userInput}
+                                    onChange={(e) => setUserInput(e.target.value)} 
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') {
+                                            handleSendMessage(); 
+                                        }
+                                    }}
+                               />
+                                <button className="send-btn" onClick={handleSendMessage}>
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                )}
+
+
                 {/* {renderFoodDetails()} */}
             </main>
         </div>

@@ -1,4 +1,7 @@
-
+body{
+  overflow-y: scroll;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .nav-btn {
   background-color: #fff;
   color: black;
@@ -30,6 +33,7 @@
   margin-bottom: 0;
   padding: 0;
   background-color: #fff;
+  box-shadow: 10em 10em 1em #000000;
 }
 
 #heading {
@@ -40,8 +44,8 @@
 }
 
 .screen1 {
-  height: 102vh;
-  margin-top: -14vh;
+  height: 88vh;
+  /* margin-top: -14vh; */
   background-color: #EBF3FA;
   text-align: center;
   place-content: center;
@@ -283,3 +287,242 @@ button:hover {
     display: flex;
   }
 }
+
+
+
+/*   */
+/* @media only screen and (max-width: 600px) {
+  body,html {
+    width: 100vw;
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  .head {
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+    padding: 0.8vh 0;
+  }
+
+  #heading {
+    font-size: 3.6rem;
+    font-weight: 545;
+  }
+
+  .nav-btn {
+    font-size: 1.7rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+  }
+  .screen1 img{
+    width: 32vw;
+  }
+  .screen1 {
+    height: auto;
+    place-content: baseline;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 13vh;
+  }
+
+  .screen1Text > h7 {
+    font-size: 1.5rem;
+  }
+
+  .screen1Text > p {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  .page1 {
+    background-image: url('web1new.svg');
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-color: #EBF3FA;
+}
+.ph1{
+  text-align: justify;
+  margin-top: -35vh;
+  margin-bottom: 27vh;
+}
+  .content {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .content h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .p1-cont,
+  .content2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .foodimage {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+    padding: 1rem;
+  }
+
+  #foot {
+    font-size: 1.3rem;
+  }
+
+  #L-i > li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+@media  only screen and (425px<width<475px) {
+  .screen1Text > h7 {
+    font-size: 1.3rem;
+  }
+  .screen1Text > p {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  .page1 {
+    background-image: url('web1new.svg');
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-color: #EBF3FA;
+}
+}
+@media only screen and (max-width: 425px) {
+  body,html {
+    width: 100vw;
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  .head {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 0.8vh 0;
+  }
+
+  #heading {
+    font-size: 2rem;
+    font-weight: 545;
+  }
+
+  .nav-btn {
+   flex-direction: row;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+  }
+  .screen1 img{
+    width: 32vw;
+  }
+  .screen1 {
+    height: auto;
+    margin-bottom: 14vh;
+    place-content: baseline;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .screen1Text > h7 {
+    font-size: 1.1rem;
+  }
+
+  .screen1Text > p {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+  .page1 {
+    background-image: url('web1new.svg');
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-color: #EBF3FA;
+}
+  .content {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .p1-cont,
+  .content2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .foodimage {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+    padding: 1rem;
+  }
+
+  #foot {
+    font-size: 1.3rem;
+  }
+
+  #L-i > li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+} */
