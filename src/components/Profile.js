@@ -127,12 +127,7 @@ const Profile = () => {
             >
               <i>📜</i> History
             </li>
-            <li
-              className="profile-list"
-              onClick={() => alert("Settings is under development.")}
-            >
-              <i>⚙️</i> Settings
-            </li>
+        
             <li
               className="profile-list"
               onClick={() => setSelectedOption("PrivacyAndPolicy")}

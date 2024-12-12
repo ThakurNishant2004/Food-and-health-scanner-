@@ -18,7 +18,7 @@ const HomePage = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const webcamRef = useRef(null);
     const fileInputRef = useRef(null);
-    const [isChatbotOpen, setIsChatbotOpen] = useState(false); // Added state for chatbot visibility
+    const [isChatbotOpen, setIsChatbotOpen] = useState(false); 
     const [messages, setMessages] = useState([{ text: "Hello! How can I assist you today?", sender: "bot" }]);
     const [userInput, setUserInput] = useState("");
 
@@ -107,18 +107,18 @@ const HomePage = () => {
             });
     };
     const toggleChatbot = () => {
-        setIsChatbotOpen(!isChatbotOpen); // Toggle chatbot visibility
+        setIsChatbotOpen(!isChatbotOpen); 
     };
     const handleSendMessage = () => {
-        if (userInput.trim() === "") return; // Prevent sending empty messages
+        if (userInput.trim() === "") return; 
 
         const newMessages = [...messages, { text: userInput, sender: "user" }];
 
-        // Mock a bot reply (replace with dynamic responses if needed)
+       
         const botReply = { text: "I'm here to help with your queries!", sender: "bot" };
 
-        setMessages([...newMessages, botReply]); // Update messages
-        setUserInput(""); // Clear input
+        setMessages([...newMessages, botReply]); 
+        setUserInput(""); 
     };
 
     const fetchFoodData = async (foodItem) => {
