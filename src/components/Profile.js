@@ -146,12 +146,12 @@ const Profile = () => {
               <i>📄</i> Terms & Conditions
             </li>
 
-            <li
+            {/* <li
               className="profile-list"
               onClick={() => alert("FAQs is under development.")}
             >
               <i>❓</i> FAQs
-            </li>
+            </li> */}
             <li className="profile-list" onClick={() => navigate("/")}>
               <i>🔓</i> Log out
             </li>
